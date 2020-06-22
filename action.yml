@@ -1,13 +1,16 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "TestProject job runner"
+description: "GitHub Action for running TestProject job"
+author: "Ryan Howard"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+  ProjectId:
+    description: "The Id of the TestProject Project you wish to use"
+    required: true
+  JobId:
+    description: "The Id of the TestProject Job you wish to run"
+    required: true
+  AuthorisationsToken:
+    description: "The TestProject API Auth token"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"

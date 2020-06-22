@@ -1,6 +1,16 @@
 import requests
 import time
+import os
 
+
+def run_tests():
+    project_id = os.environ["ProjectId"]
+    job_id = os.environ["JobId"]
+    auth = os.environ["AuthorisationToken"]
+
+    #project_id = 'jrKiet1cHEyKBTcZMmLoMg'
+    #job_id = 'heb20uUMlkSeTvaM8K8fFg'
+    #auth = 'wiaj2NlksX-SGf6VJctehppP1PLlYNZ5q4FNiQVY7wY1'
 
 def run_job(project_id, job_id, authorisation):
     headers = {"Authorization": authorisation}
@@ -33,9 +43,7 @@ def check_job_status(project_id, job_id, execution_id, authorisation):
 
     return status
 
-project_id = 'jrKiet1cHEyKBTcZMmLoMg'
-job_id = 'heb20uUMlkSeTvaM8K8fFg'
-auth = 'wiaj2NlksX-SGf6VJctehppP1PLlYNZ5q4FNiQVY7wY1'
+
 
 
 start_job = run_job(project_id, job_id, auth)
