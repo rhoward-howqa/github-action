@@ -17,3 +17,4 @@ if start_job[1] == 200:
     print('The current job status is {check_job}'.format(check_job=check_job))
 else:
     print("something went wrong")
+    exit(1)
