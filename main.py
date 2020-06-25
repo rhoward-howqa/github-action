@@ -5,9 +5,9 @@ import os
 # job_id = 'heb20uUMlkSeTvaM8K8fFg'
 # auth = 'wiaj2NlksX-SGf6VJctehppP1PLlYNZ5q4FNiQVY7wY1'
 
-project_id = os.environ['project_id']
-job_id = os.environ['job_id']
-auth = os.environ['authorisation_token']
+project_id = os.environ['INPUT_PROJECT_ID']
+job_id = os.environ['INPUT_JOB_ID']
+auth = os.environ['INPUT_AUTHORISATION_TOKEN']
 
 # Call API to start TestProject job
 start_job = run_job(project_id, job_id, auth)
