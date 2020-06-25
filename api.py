@@ -17,6 +17,7 @@ def run_job(project_id, job_id, authorisation):
         return job_id, r.status_code
     except:
         print("Job failed to start, status code returned was {}. Check that your agent is running".format(r.status_code))
+        return "No job ID", r.status_code
 
 
 
