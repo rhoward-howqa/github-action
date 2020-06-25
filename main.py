@@ -12,7 +12,6 @@ auth = os.environ['INPUT_AUTHORISATION_TOKEN']
 # Call API to start TestProject job
 start_job = run_job(project_id, job_id, auth)
 
-print(start_job[1])
 if start_job[1] == 200:
     check_job = check_job_status(project_id, job_id, start_job[0], auth)
     print('The current job status is {check_job}'.format(check_job=check_job))
