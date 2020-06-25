@@ -2,13 +2,13 @@ name: "TestProject job runner"
 description: "GitHub Action for running TestProject job"
 author: "Ryan Howard"
 inputs:
-  ProjectId:
+  project_id:
     description: "The Id of the TestProject Project you wish to use"
     required: true
-  JobId:
+  job_id:
     description: "The Id of the TestProject Job you wish to run"
     required: true
-  AuthorisationsToken:
+  authorisation_token:
     description: "The TestProject API Auth token"
     required: true
 runs:

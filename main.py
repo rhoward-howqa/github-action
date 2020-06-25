@@ -1,10 +1,8 @@
 from api import run_job, check_job_status
 
-project_id = 'jrKiet1cHEyKBTcZMmLoMg'
-job_id = 'heb20uUMlkSeTvaM8K8fFg'
-auth = 'wiaj2NlksX-SGf6VJctehppP1PLlYNZ5q4FNiQVY7wY1'
-
-
+#project_id = 'jrKiet1cHEyKBTcZMmLoMg'
+#job_id = 'heb20uUMlkSeTvaM8K8fFg'
+#auth = 'wiaj2NlksX-SGf6VJctehppP1PLlYNZ5q4FNiQVY7wY1'
 
 #Call API to start TestProject job
 start_job = run_job(project_id, job_id, auth)
@@ -15,6 +13,3 @@ if start_job[1] == 200:
     print('The current job status is {check_job}'.format(check_job=check_job))
 else:
     print("something went wrong")
-
-
-
