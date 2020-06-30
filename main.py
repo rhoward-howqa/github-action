@@ -27,7 +27,8 @@ if response_code == 200:
         exit(1)
     elif check_response_code == 401:
         print("Job failed to run, status code returned was {}. "
-              "Check The Project Id and Authorisation code are correct".format(response_code))
+              "Check The Project Id and Authorisation code are correct"
+              .format(response_code))
         exit(1)
     elif check_response_code == 400:
         print("Job failed to run, status code returned was {}. "
@@ -40,11 +41,13 @@ if response_code == 200:
 
 elif response_code == 412:
     print("Job failed to start, status code returned was {}. "
-          "Check that your agent is running".format(response_code))
+          "Check that your agent is running"
+          .format(response_code))
     exit(1)
 elif response_code == 401:
     print("Job failed to run, status code returned was {}. "
-          "Check The Project Id and Authorisation code are correct".format(response_code))
+          "Check The Project Id and Authorisation code are correct"
+          .format(response_code))
     exit(1)
 elif response_code == 400:
     print("Job failed to run, status code returned was {}. "
