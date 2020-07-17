@@ -13,15 +13,16 @@ execution_id, response_code = run_job(project_id, job_id, auth)
 
 
 if response_code == 200:
-    state, response_code = check_job_status(project_id, job_id, execution_id, auth, interval)
+    state, response_code = check_job_status(project_id, job_id,
+                                            execution_id, auth, interval)
     if response_code == 200:
         print(f'The final run status of the Job is {state}')
         if state != 'Passed':
             exit(1)
     else:
-        print(error_message(response_code), f'Error running job status code returned was {response_code}.')
+        print(error_message(response_code),
+              f'Error running job status code returned was {response_code}.')
         exit(1)
 else:
     print(error_message(response_code))
     exit(1)
-
