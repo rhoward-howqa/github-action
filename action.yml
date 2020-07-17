@@ -11,6 +11,9 @@ inputs:
   authorisation_token:
     description: "The TestProject API Auth token"
     required: true
+  interval_time:
+    description: "The interval in seconds in which the status of a job will be checked"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
