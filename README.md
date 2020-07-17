@@ -1,4 +1,6 @@
 # TestProject Run Job
+![Actions Status](https://github.com/rhoward-howqa/github-action/workflows/Lint/badge.svg)
+![Actions Status](https://github.com/rhoward-howqa/github-action/workflows/Unit%20Tests/badge.svg)
 
 This is a GitHub actions for running a TestProject Job. It utilises the TestProject API to trigger the execution of a job. Once the job is executed the Check State API will be called at configured intervals to check if the status of the job.
 Once the returned state of the Check State request is Failed, Passed, Skipped, Suspended, Error or Aborted the action will end.  
