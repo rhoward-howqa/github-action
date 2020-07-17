@@ -63,7 +63,7 @@ def check_job_status(project_id, job_id, execution_id, authorisation, interval):
             body = r.json()
             # Get the state from the Response Body
             run_state = body['state']
-            print(run_state)
+            print(f'The current status of the job is {run_state}')
             time.sleep(int(interval))
         return run_state, r.status_code
     except requests.exceptions.HTTPError as error:
