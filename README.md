@@ -1,4 +1,4 @@
-# Python Container Action Template
+# TestProject Run Job
 
 This is a GitHub actions for running a TestProject Job. It utilises the TestProject API to trigger the execution of a job. Once the job is executed the Check State API will be called at configured intervals to check if the status of the job.
 Once the returned state of the Check State request is Failed, Passed, Skipped, Suspended, Error or Aborted the action will end.  
